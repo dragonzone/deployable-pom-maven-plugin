@@ -28,7 +28,7 @@ import org.apache.maven.model.Model;
 import org.apache.maven.model.building.ModelBuildingRequest;
 import org.apache.maven.model.building.ModelProblemCollector;
 import org.apache.maven.model.building.ModelProblemCollectorRequest;
-import org.apache.maven.model.interpolation.StringSearchModelInterpolator;
+import org.apache.maven.model.interpolation.StringVisitorModelInterpolator;
 import org.apache.maven.model.io.DefaultModelReader;
 import org.apache.maven.model.io.DefaultModelWriter;
 import org.apache.maven.plugin.AbstractMojo;
@@ -144,7 +144,7 @@ public class ResolveCiPropertiesMojo extends AbstractMojo {
         }
     }
 
-    private class CiPropertyVisitorModelInterpolator extends StringSearchModelInterpolator implements ModelProblemCollector {
+    private class CiPropertyVisitorModelInterpolator extends StringVisitorModelInterpolator implements ModelProblemCollector {
 
         private List<ModelProblemCollectorRequest> problems = new ArrayList<>();
 
