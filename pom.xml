@@ -23,8 +23,8 @@
 
     <parent>
         <groupId>zone.dragon</groupId>
-        <artifactId>base-java-pom</artifactId>
-        <version>4.0.6</version>
+        <artifactId>base-maven-plugin-pom</artifactId>
+        <version>4.1.0</version>
     </parent>
 
     <groupId>zone.dragon.maven.plugin</groupId>
@@ -43,33 +43,9 @@
         </license>
     </licenses>
 
-    <properties>
-        <maven.version>3.6.3</maven.version>
-        <maven.tools.version>3.6.0</maven.tools.version>
-    </properties>
-
     <prerequisites>
-        <maven>${maven.version}</maven>
+        <maven>${minimum.maven.version}</maven>
     </prerequisites>
-
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.apache.maven</groupId>
-                <artifactId>maven</artifactId>
-                <version>${maven.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.maven.plugin-tools</groupId>
-                <artifactId>maven-plugin-tools</artifactId>
-                <version>${maven.tools.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 
     <dependencies>
         <dependency>
