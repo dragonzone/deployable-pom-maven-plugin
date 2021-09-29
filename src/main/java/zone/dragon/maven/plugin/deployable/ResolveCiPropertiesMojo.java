@@ -111,7 +111,7 @@ public class ResolveCiPropertiesMojo extends AbstractMojo {
             getLog().debug("Writing deployable pom file to " + deployablePomFile);
             DefaultModelWriter writer = new DefaultModelWriter();
             writer.write(deployablePomFile, Collections.emptyMap(), model);
-            project.setFile(deployablePomFile);
+            project.setPomFile(deployablePomFile);
             getLog().debug("deployable pom file written.");
         } catch (IOException e) {
             throw new MojoExecutionException("Failed to write deployable pom file: " + project.getFile().getAbsolutePath(), e);
